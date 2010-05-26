@@ -1,0 +1,22 @@
+!!! 1.1
+%html{ "xmlns" => "http://www.w3.org/1999/xhtml", "xml:lang" => "en" }
+  %head
+    %meta{ "http-equiv" => "content-type", "content" => "text/html;charset=UTF-8" }
+    %meta{ "name" => "description", "content" => "" }
+    %meta{ "name" => "keywords", "content" => "" }
+    -# TODO: make compatible with IE 8
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=EmulateIE7" }
+    %title
+      == Joy's Cakes - #{@page_title || "Cakes By a Mom for Every Occasion"}
+
+    = stylesheet_link_tag "application"
+  %body
+    #wrapper
+      #header
+      #content
+        = yield
+
+    #footer
+      %p
+        \&copy;
+        Joy's Cakes, 2009, All rights reserved.
