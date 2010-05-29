@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
 
   def category_image(category)
     return nil unless Categories.include?(category)
+    Dir.chdir("#{RAILS_ROOT}/public/images")
     file = "./thumbs/#{Categories[category]}/category_image.jpg"
     file if FileTest.exist? file
   end
