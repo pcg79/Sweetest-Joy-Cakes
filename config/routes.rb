@@ -40,6 +40,8 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
 
   map.root :controller => "content", :action => "index"
+  map.about     '/about',     :controller => "content", :action => "about"
+  map.contact   '/contact',   :controller => "content", :action => "contact"
   map.gallery   '/gallery',   :controller => "content", :action => "gallery"
   map.birthdays '/birthdays', :controller => "content", :action => "birthdays"
   map.weddings  '/weddings',  :controller => "content", :action => "weddings"

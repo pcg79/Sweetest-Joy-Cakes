@@ -1,34 +1,22 @@
-/*========================================
-  Main Content
-========================================*/
-#content
-  .main
-    padding: 20px 40px
-    min-height: 260px
-    &.terms
-      h3
-        margin-top: 12px
-      ol
-        list-style-type: decimal
-    &.plans
-      padding: 20px 0
-    h3#heading
-      margin-top: 12px
-      &.restrictions
-        margin-top: 45px
+@import partials/reset.sass
 
+//========================================
+//  Main Content
+//========================================
 
 body
   background: #D693BD
 
-#header
-  min-height: 120px
 
-#content
-  background: #9C0063
-  min-height: 500px
-  margin: auto
-  width: 800px
+//========================================
+//  Content
+//========================================
 
-.picture
-  float: left
+@import partials/content.sass
+
+//========================================
+//  Gallery
+//========================================
+
+@import partials/gallery.sass
+

@@ -1,12 +1,13 @@
-- unless @birthday.blank?
-  .thumbnails#birthdays
-    %h2 Birthdays
-    = link_to image_tag(@birthday), :action => 'birthdays'
-- unless @wedding.blank?
-  .thumbnails#weddings
-    %h2 Weddings
-    = link_to image_tag(@wedding), :action => 'weddings'
-- unless @other.blank?
-  .thumbnails#other
-    %h2 Other Special Occasions
-    = link_to image_tag(@other), :action => 'others'
+#gallery
+  - unless @birthday.blank?
+    .thumbnails#birthdays
+      = link_to image_tag(@birthday), birthdays_path
+      %h2= link_to "Birthdays", birthdays_path
+  - unless @wedding.blank?
+    .thumbnails#weddings
+      = link_to image_tag(@wedding), weddings_path
+      %h2= link_to "weddings", weddings_path
+  - unless @other.blank?
+    .thumbnails#other
+      = link_to image_tag(@other), others_path
+      %h2= link_to "Other Special Occasions", others_path
