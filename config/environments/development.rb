@@ -15,3 +15,6 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+# Paperclip (for identify command - from: http://nhw.pl/wp/2009/07/14/paperclip-passenger-identify-not-recognized)
+Paperclip.options[:command_path] = "/opt/local/bin"

@@ -32,6 +32,9 @@ abbr, acronym {
 body {
   background: #d693bd; }
 
+p {
+  padding: 10px; }
+
 #header {
   min-height: 120px;
   width: 800px;

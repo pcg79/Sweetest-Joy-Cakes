@@ -1,0 +1,6 @@
+= javascript_include_tag "third_party/jquery.lightbox-0.5.min"
+= javascript_include_tag "pictures"
+= stylesheet_link_tag "jquery.lightbox-0.5"
+
+.thumbnails#pictures
+  = render :partial => 'picture', :collection => @pictures, :as => :picture

@@ -19,8 +19,10 @@ class ContentController < ApplicationController
   end
 
   def birthdays
-    @pictures = image_list :birthdays
-    render :action => 'pictures'
+    # @pictures = image_list :birthdays
+    @pictures = Picture.find_all_by_category('birthdays')
+    # logger.debug "*** [ContentController.birthdays] - @pictures = #{@pictures}"
+    render :action => 'index'
   end
 
   def weddings
