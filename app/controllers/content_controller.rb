@@ -4,13 +4,6 @@ class ContentController < ApplicationController
 
   end
 
-  def gallery_old
-    @birthdays = image_list :birthdays
-    @weddings  = image_list :weddings
-    @other     = image_list :others
-    @practice  = image_list :practice
-  end
-
   def gallery
     @birthday  = category_image :birthdays
     @wedding   = category_image :weddings
@@ -19,19 +12,17 @@ class ContentController < ApplicationController
   end
 
   def birthdays
-    # @pictures = image_list :birthdays
-    @pictures = Picture.find_all_by_category('birthdays')
-    # logger.debug "*** [ContentController.birthdays] - @pictures = #{@pictures}"
+    @pictures = Picture.by_category('birthdays')
     render :action => 'index'
   end
 
   def weddings
-    @pictures = image_list :weddings
-    render :action => 'pictures'
+    @pictures = Picture.by_category('weddings')
+    render :action => 'index'
   end
 
   def others
-    @pictures = image_list :others
-    render :action => 'pictures'
+    @pictures = Picture.by_category('others')
+    render :action => 'index'
   end
 end
