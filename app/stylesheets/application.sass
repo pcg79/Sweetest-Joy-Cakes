@@ -4,11 +4,24 @@
 //  Main Content
 //========================================
 
+!width = 800px
+!border_radius = 15px
+
+@mixin curved
+  -moz-border-radius = !border_radius
+  -webkit-border-radius = !border_radius
+  -khtml-border-radius = !border_radius
+  border-radius = !border_radius
+  behavior: url('border-radius.htc')
+  padding: 12px
+
+
 body
   background: #D693BD
 
 p
   padding: 10px
+
 
 //========================================
 //  Content
@@ -22,3 +35,15 @@ p
 
 @import partials/gallery.sass
 
+//========================================
+//  Header
+//========================================
+
+@import partials/header.sass
+
+
+//========================================
+//  Footer
+//========================================
+
+@import partials/footer.sass

@@ -35,24 +35,6 @@ body {
 p {
   padding: 10px; }
 
-#header {
-  min-height: 120px;
-  width: 800px;
-  margin: auto; }
-  #header ul {
-    list-style: none;
-    position: absolute;
-    top: 95px; }
-    #header ul li {
-      background: url("../images/bullet_white.jpg") center right no-repeat;
-      padding: 0 75px; }
-    #header ul li:last-child {
-      background: none; }
-  #header ul, #header li {
-    display: inline; }
-  #header a {
-    text-decoration: none; }
-
 #content {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -63,7 +45,8 @@ p {
   background: #9c0063;
   min-height: 500px;
   margin: auto;
-  width: 800px; }
+  width: 800px;
+  overflow: hidden; }
   #content .main {
     padding: 20px 40px;
     min-height: 260px; }
@@ -77,11 +60,6 @@ p {
       margin-top: 12px; }
       #content .main h3#heading.restrictions {
         margin-top: 45px; }
-
-#footer {
-  width: 800px;
-  margin: auto;
-  height: 100px; }
 
 .picture {
   float: left; }
@@ -103,3 +81,34 @@ h2 {
     font-size: 20px;
     color: gray;
     font-weight: bold; }
+
+table {
+  width: 100%; }
+  table tr {
+    padding: 10px; }
+    table tr td {
+      padding: 10px; }
+
+#header {
+  min-height: 120px;
+  width: 800px;
+  margin: auto; }
+  #header ul {
+    list-style: none;
+    position: absolute;
+    top: 95px; }
+    #header ul li {
+      background: url("../images/bullet_white.jpg") center right no-repeat;
+      padding: 0 75px; }
+    #header ul li:last-child {
+      background: none; }
+  #header ul, #header li {
+    display: inline; }
+  #header a {
+    text-decoration: none; }
+
+#footer {
+  width: 800px;
+  margin: auto;
+  height: 100px;
+  clear: left; }

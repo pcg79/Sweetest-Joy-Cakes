@@ -13,16 +13,19 @@ class ContentController < ApplicationController
 
   def birthdays
     @pictures = Picture.by_category('birthdays')
+    @title = "Birthday Cakes"
     render :action => 'index'
   end
 
   def weddings
     @pictures = Picture.by_category('weddings')
+    @title = "Wedding Cakes"
     render :action => 'index'
   end
 
   def others
-    @pictures = Picture.by_category('others')
+    @pictures = Picture.by_category('other')
+    @title = "Cakes for Other Special Occasions"
     render :action => 'index'
   end
 end
