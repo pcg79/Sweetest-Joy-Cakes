@@ -18,16 +18,13 @@ class ApplicationController < ActionController::Base
 
   ImageFileTypes = %W(jpeg jpg JPEG JPG).join(',')
 
-  def image_list(category)
-    return nil unless Categories.include?(category)
-    Dir.chdir("#{RAILS_ROOT}/public/images")
-    Dir["./thumbs/#{Categories[category]}/**/*.{#{ImageFileTypes}}"]
-  end
-
   def category_image(category)
+    orig_dir = Dir.pwd
     return nil unless Categories.include?(category)
     Dir.chdir("#{RAILS_ROOT}/public/images")
     file = "./thumbs/#{Categories[category]}/category_image.jpg"
-    file if FileTest.exist? file
+    file = nil unless FileTest.exist? file
+    Dir.chdir(orig_dir)
+    file
   end
 end
