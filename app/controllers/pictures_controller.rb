@@ -19,24 +19,24 @@ class PicturesController < ApplicationController
   end
 
   def birthdays
-    @pictures = Picture.by_category('birthdays') / PicsPerRow
-    @title = "Birthday Cakes"
-    render :action => 'index'
+    render_pictures 'birthdays', 'Birthday Cakes'
   end
 
   def weddings
-    @pictures = Picture.by_category('weddings')
-    @title = "Wedding Cakes"
-    render :action => 'index'
+    render_pictures 'weddings', 'Wedding Cakes'
   end
 
   def others
-    @pictures = Picture.by_category('other')
-    @title = "Cakes for Other Special Occasions"
-    render :action => 'index'
+    render_pictures 'other', 'Cakes for Other Special Occasions'
   end
 
   private
+
+  def render_pictures(category, title=nil)
+    @pictures = Picture.by_category(category) / PicsPerRow
+    @title = title
+    render :action => 'index'
+  end
 
   def authorize
     render :nothing => true, :status => 404 unless !params[:joys_sk].blank? && params[:joys_sk] == "ethan"
