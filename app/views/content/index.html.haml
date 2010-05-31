@@ -7,7 +7,7 @@
 .thumbnails
   %h2=@title
 
-  %table#pictures
+  %table#pictures{ :border => "1" }
     - @pictures.each_with_index do |pic, index|
       - if (index % pics_per_row == 0)
         %tr
