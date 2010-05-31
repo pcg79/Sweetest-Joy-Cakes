@@ -47,22 +47,6 @@ p {
   margin: auto;
   width: 800px;
   overflow: hidden; }
-  #content .main {
-    padding: 20px 40px;
-    min-height: 260px; }
-    #content .main.terms h3 {
-      margin-top: 12px; }
-    #content .main.terms ol {
-      list-style-type: decimal; }
-    #content .main.plans {
-      padding: 20px 0; }
-    #content .main h3#heading {
-      margin-top: 12px; }
-      #content .main h3#heading.restrictions {
-        margin-top: 45px; }
-
-.picture {
-  float: left; }
 
 #gallery {
   margin: auto; }
@@ -82,12 +66,14 @@ h2 {
     color: gray;
     font-weight: bold; }
 
-table {
-  width: 100%; }
-  table tr {
-    padding: 10px; }
-    table tr td {
-      padding: 10px; }
+table#pictures {
+  border-color: black;
+  border-collapse: separate; }
+  table#pictures td {
+    border: 1px black solid;
+    background-image: url("../images/cell_background.jpg");
+    height: 125px;
+    width: 131px; }
 
 #header {
   min-height: 120px;

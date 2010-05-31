@@ -44,10 +44,11 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "content", :action => "index"
   map.about     '/about',     :controller => "content", :action => "about"
   map.contact   '/contact',   :controller => "content", :action => "contact"
-  map.gallery   '/gallery',   :controller => "content", :action => "gallery"
-  map.birthdays '/birthdays', :controller => "content", :action => "birthdays"
-  map.weddings  '/weddings',  :controller => "content", :action => "weddings"
-  map.others    '/others',     :controller => "content", :action => "others"
+
+  map.gallery   '/gallery',   :controller => "pictures", :action => "gallery"
+  map.birthdays '/birthdays', :controller => "pictures", :action => "birthdays"
+  map.weddings  '/weddings',  :controller => "pictures", :action => "weddings"
+  map.others    '/others',    :controller => "pictures", :action => "others"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
