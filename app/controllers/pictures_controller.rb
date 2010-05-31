@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   before_filter :authorize, :only => [:create, :new]
 
+  PicsPerRow = 6
+
   def new
     @joys_sk = "ethan"
   end
@@ -17,7 +19,7 @@ class PicturesController < ApplicationController
   end
 
   def birthdays
-    @pictures = Picture.by_category('birthdays')
+    @pictures = Picture.by_category('birthdays') / PicsPerRow
     @title = "Birthday Cakes"
     render :action => 'index'
   end

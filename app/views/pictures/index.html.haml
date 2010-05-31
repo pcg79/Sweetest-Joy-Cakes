@@ -2,12 +2,8 @@
 = javascript_include_tag "pictures"
 = stylesheet_link_tag "jquery.lightbox-0.5"
 
-- pics_per_row = @pics_per_row || 6
-
-%table#pictures{ :border => "1" }
+%table#pictures
   %caption= @title
-  - @pictures.each_with_index do |pic, index|
-    - if (index % pics_per_row == 0)
-      %tr
-
-    = render :partial => 'picture', :object => pic, :as => :picture
+  - @pictures.each do |pics|
+    %tr
+      = render :partial => 'picture', :collection => pics, :as => :picture

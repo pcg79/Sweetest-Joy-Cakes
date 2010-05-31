@@ -1,2 +1,2 @@
-%td.picture{ :align => "center", :valign => "middle", :nowrap => "" }
+%td.picture
   =link_to image_tag(picture.photo.url(:thumb)), "#{picture.photo.url(:medium)}", { :title => picture.description }
