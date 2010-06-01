@@ -1,0 +1,17 @@
+#contact
+  %p
+    Whether you would like a quote on a cake or want to comment on a previous purchase, we'd love to hear from you.
+    %br
+    Just fill out and submit the below form and, if you provide contact information, we'll get back to you.
+
+  - form_for :contact_form, @contact_form, :url => { :action => "contact_submit" } do |f|
+    %p
+      = f.text_field :name, :label => "Name<br/>"
+    %p
+      = f.text_field :email, :label => "Email<br/>"
+    %p
+      = f.text_field :phone_number, :label => "Phone Number<br/>"
+    %p
+      = f.text_area :message, :label => "Comment<br/>"
+    %p
+      = f.submit "Submit", :class => "button"
