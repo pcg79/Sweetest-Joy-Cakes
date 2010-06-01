@@ -9,7 +9,7 @@ class ContentController < ApplicationController
 
     if @contact_form.save
       flash[:notice] = "Thank you!  Your message has been received.  "
-      if @contact_form.phone_number.blank? || @contact_form.email.blank?
+      if !@contact_form.phone_number.blank? || !@contact_form.email.blank?
         flash[:notice] << "We will be in touch!"
       else
         flash[:notice] << "<br/><small>Unfortunately without contact information we won't be able to reply to you.</small>"

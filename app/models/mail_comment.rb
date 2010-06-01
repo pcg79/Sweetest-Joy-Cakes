@@ -4,6 +4,6 @@ class MailComment < ActionMailer::Base
     recipients "pat.george@gmail.com"
     from contact_form.email || "Unknown <pat.george@gmail.com>"
     subject "Contact from Joy's site"
-    body :name => contact_form.name, :email_address => contact_form.email, :message => contact_form.message, :phone_number => contact_form.phone_number
+    body :name => contact_form.name, :email => contact_form.email, :message => contact_form.message, :phone_number => contact_form.phone_number
   end
 end
