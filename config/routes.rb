@@ -46,6 +46,7 @@ ActionController::Routing::Routes.draw do |map|
   map.contact   '/contact',   :controller => "content", :action => "contact"
 
   map.gallery   '/gallery',   :controller => "pictures", :action => "gallery"
+  map.flavors   '/flavors',   :controller => "pictures", :action => "flavors"
   map.birthdays '/birthdays', :controller => "pictures", :action => "birthdays"
   map.weddings  '/weddings',  :controller => "pictures", :action => "weddings"
   map.others    '/others',    :controller => "pictures", :action => "others"
