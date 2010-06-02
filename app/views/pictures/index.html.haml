@@ -2,6 +2,9 @@
 = javascript_include_tag "pictures"
 = stylesheet_link_tag "jquery.lightbox-0.5"
 
+%span#breadcrumb
+  = link_to "Back To Gallery", gallery_path
+
 %table#pictures
   %caption= @title
   - @pictures.each do |pics|
