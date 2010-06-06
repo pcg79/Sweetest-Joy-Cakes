@@ -5,8 +5,6 @@ Bundler.require(:shoulda)
 require 'shoulda'
 
 
-
-
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   #
@@ -15,4 +13,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # def logger
+  #   RAILS_DEFAULT_LOGGER
+  # end
 end
