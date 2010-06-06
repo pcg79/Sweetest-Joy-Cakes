@@ -35,6 +35,12 @@ end
 gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
 gem "paperclip",         :git => "git://github.com/samsoffes/paperclip.git", :branch => "rails3"
 
+gem "autotest"
+gem "autotest-rails"
+# gem "redgreen"
+gem "autotest-growl"
+gem "autotest-fsevent"
+
 group :console do
   gem 'wirble'
   gem 'hirb'
