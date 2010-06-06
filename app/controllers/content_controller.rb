@@ -7,7 +7,7 @@ class ContentController < ApplicationController
   def contact_submit
     @contact_form = ContactForm.new params[:contact_form]
 
-    if @contact_form.save
+    if @contact_form.valid?
       flash[:notice] = "Thank you!  Your message has been received.  "
       if !@contact_form.phone_number.blank? || !@contact_form.email.blank?
         flash[:notice] << "We will be in touch!"
@@ -15,10 +15,10 @@ class ContentController < ApplicationController
         flash[:notice] << "<br/><small>Unfortunately without contact information we won't be able to reply to you.</small>"
       end
 
-      MailComment.deliver_comment_message @contact_form
+      MailComment.comment_message(@contact_form).deliver
       redirect_to root_url
     else
-      flash[:error] = "There was a problem receiving your message.<br/><br/><small>#{@contact_form.errors.full_messages.to_sentence}</small>"
+      flash.now[:error] = "There was a problem receiving your message.<br/><br/><small>#{@contact_form.errors.full_messages.to_sentence}</small>"
       render :action => "contact"
     end
   end

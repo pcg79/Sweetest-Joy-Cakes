@@ -1,17 +1,31 @@
-!!! XML
-!!!
-%html
+!!! 1.1
+%html{ "xmlns" => "http://www.w3.org/1999/xhtml", "xml:lang" => "en" }
   %head
-    %title My application
-    = stylesheet_link_tag 'screen', :media => 'screen, projection'
-    = stylesheet_link_tag 'print', :media => 'print'
-    /[if lt IE 8]
-      = stylesheet_link_tag 'ie', :media => 'screen, projection'
-    = javascript_include_tag "jquery", "rails", "application"
-    = csrf_meta_tag
+    %meta{ "http-equiv" => "content-type", "content" => "text/html;charset=UTF-8" }
+    %meta{ "name" => "description", "content" => "" }
+    %meta{ "name" => "keywords", "content" => "" }
+    -# TODO: make compatible with IE 8
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=EmulateIE7" }
+    %title
+      == Joy's Cakes - #{@page_title || "There's Joy in Every Bite"}
+
+    = javascript_include_tag "jquery"
+    = stylesheet_link_tag "application"
+
   %body
-    #container
-      #header HEADER
-      #sidebar SIDEBAR
-      #content= yield
-      #footer FOOTER
+    #wrapper
+      #header
+        %ul
+          %li= link_to "Home", root_path
+          %li= link_to "Gallery", gallery_path
+          %li= link_to "Flavors", flavors_path
+          %li= link_to "Contact", contact_path
+          %li= link_to "About", about_path
+      #content
+        = flash_notices
+        = yield
+
+    #footer
+      #copy
+        \&copy;
+        Joy's Cakes, 2010, All rights reserved.

@@ -13,6 +13,8 @@ JoysCakes::Application.routes.draw do |map|
   match '/weddings'  => 'pictures#weddings',  :as => :weddings
   match '/others'    => 'pictures#others',    :as => :others
 
+  match '/contact_submit' => 'content#contact_submit', :as => :contact_submit
+
   # map.about     '/about',     :controller => "content", :action => "about"
   # map.contact   '/contact',   :controller => "content", :action => "contact"
   #

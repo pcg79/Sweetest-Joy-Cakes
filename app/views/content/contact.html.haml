@@ -4,14 +4,23 @@
     %br
     Just fill out and submit the below form and, if you provide contact information, we'll get back to you.
 
-  - form_for :contact_form, @contact_form, :url => { :action => "contact_submit" } do |f|
+  = form_for :contact_form, :url => contact_submit_path do |f|
     %p
-      = f.text_field :name, :label => "Name<br/>"
+      = f.label :name, "Name"
+      %br
+      = f.text_field :name
     %p
-      = f.text_field :email, :label => "Email<br/>"
+      = f.label :email, "Email"
+      %br
+      = f.text_field :email
     %p
-      = f.text_field :phone_number, :label => "Phone Number<br/>"
+      = f.label :phone_number, "Phone Number"
+      %br
+      = f.text_field :phone_number
     %p
-      = f.text_area :message, :label => "Comment <small>(required)</small><br/>", :rows => "10"
+      = f.label :message, "Comment"
+      %small (required)
+      %br
+      = f.text_area :message, :rows => "10"
     %p
       = f.submit "Submit", :class => "button"

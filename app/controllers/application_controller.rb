@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   def category_image(category)
     orig_dir = Dir.pwd
     return nil unless Categories.include?(category)
-    Dir.chdir("#{RAILS_ROOT}/public/images")
+    Dir.chdir("#{Rails.root}/public/images")
     file = "./thumbs/#{Categories[category]}/category_image.jpg"
     file = nil unless FileTest.exist? file
     Dir.chdir(orig_dir)

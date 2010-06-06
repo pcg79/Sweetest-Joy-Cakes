@@ -5,13 +5,11 @@ gem 'rails', '3.0.0.beta3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -24,9 +22,20 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :test do
 #   gem 'webrat'
 # end
+gem "pg"
 gem "haml", ">=3.0.4"
 gem "compass", ">= 0.10.1"
-gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3", :group => :test
-gem "shoulda", :git => "git://github.com/thoughtbot/shoulda.git", :branch => "rails3", :require => nil, :group => :test
+# gem "formtastic-rails3"
+
+group :test do
+  gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"
+  gem "shoulda",      :git => "git://github.com/thoughtbot/shoulda.git",      :branch => "rails3", :require => nil
+end
+
 gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
-gem "capistrano"
+gem "paperclip",         :git => "git://github.com/samsoffes/paperclip.git", :branch => "rails3"
+
+group :console do
+  gem 'wirble'
+  gem 'hirb'
+end
