@@ -1,28 +1,18 @@
 JoysCakes::Application.routes.draw do |map|
-  resources :pictures
-
+  resources :cakes
 
   root :to => 'content#index'
 
-  match '/about'   => 'content#about',    :as => :about
+  match '/about'   => 'content#about',   :as => :about
   match '/contact' => 'content#contact', :as => :contact
 
-  match '/gallery'   => 'pictures#gallery',   :as => :gallery
-  match '/flavors'   => 'pictures#flavors',   :as => :flavors
-  match '/birthdays' => 'pictures#birthdays', :as => :birthdays
-  match '/weddings'  => 'pictures#weddings',  :as => :weddings
-  match '/others'    => 'pictures#others',    :as => :others
+  match '/gallery'   => 'cakes#gallery',   :as => :gallery
+  match '/flavors'   => 'cakes#flavors',   :as => :flavors
+  match '/birthdays' => 'cakes#birthdays', :as => :birthdays
+  match '/weddings'  => 'cakes#weddings',  :as => :weddings
+  match '/others'    => 'cakes#others',    :as => :others
 
   match '/contact_submit' => 'content#contact_submit', :as => :contact_submit
-
-  # map.about     '/about',     :controller => "content", :action => "about"
-  # map.contact   '/contact',   :controller => "content", :action => "contact"
-  #
-  # map.gallery   '/gallery',   :controller => "pictures", :action => "gallery"
-  # map.flavors   '/flavors',   :controller => "pictures", :action => "flavors"
-  # map.birthdays '/birthdays', :controller => "pictures", :action => "birthdays"
-  # map.weddings  '/weddings',  :controller => "pictures", :action => "weddings"
-  # map.others    '/others',    :controller => "pictures", :action => "others"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

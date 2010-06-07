@@ -9,9 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100530155657) do
+ActiveRecord::Schema.define(:version => 20100607152650) do
 
-  create_table "pictures", :force => true do |t|
+  create_table "cakes", :force => true do |t|
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

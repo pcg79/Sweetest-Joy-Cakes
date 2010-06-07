@@ -1,4 +1,4 @@
-class PicturesController < ApplicationController
+class CakesController < ApplicationController
   before_filter :authorize, :only => [:create, :new]
 
   PicsPerRow = 6
@@ -33,7 +33,7 @@ class PicturesController < ApplicationController
   private
 
   def render_pictures(category, title=nil)
-    @pictures = Picture.by_category(category) / PicsPerRow
+    @pictures = Cake.by_category(category) / PicsPerRow
     @title = title
     render :action => 'index'
   end
