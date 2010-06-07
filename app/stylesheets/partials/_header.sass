@@ -1,26 +1,23 @@
 div#header
-  min-height: 120px
-  width = !width
-  margin: auto
-  font-family: "Century Gothic"
+  +column($blueprint-grid-columns)
 
-  ul
-    list-style: none
-    position: absolute
-    top: 95px
+  font-family: "Century Gothic"
+  height: 120px
+
+  div#header-list
+    margin-top: 95px
+
+    ul
+      text-align: center
 
     li
+      display: inline
       background: url('../images/bullet_white.jpg') center right no-repeat
-      padding: 0 53px
+
     li:last-child
       background: none
 
-  ul, li
-    display: inline
-
-  a
-    text-decoration: none
-
-    &:hover
-      border-bottom: 2px solid #4082AE
-      color: white
+    a
+      +link-colors($link-color, #4082AE)
+      +hover-link
+      padding: 0 53px

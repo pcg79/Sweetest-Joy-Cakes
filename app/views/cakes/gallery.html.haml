@@ -1,6 +1,6 @@
 #gallery
   - unless @birthday.blank?
-    .thumbnails#birthdays
+    .thumbnails#birthdays#left
       = link_to image_tag(@birthday), birthdays_path
       %h2= link_to "Birthdays", birthdays_path
   - unless @wedding.blank?
@@ -8,6 +8,6 @@
       = link_to image_tag(@wedding), weddings_path
       %h2= link_to "weddings", weddings_path
   - unless @other.blank?
-    .thumbnails#other
+    .thumbnails#other#right
       = link_to image_tag(@other), others_path
       %h2= link_to "Other Special Occasions", others_path

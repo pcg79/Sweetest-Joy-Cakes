@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  $('#pictures a').lightBox();
+  $('table#pictures a').lightBox();
 });

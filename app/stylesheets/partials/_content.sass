@@ -1,11 +1,37 @@
-div#content
-  @include curved
-  background: #9C0063
-  min-height: 500px
-  margin: auto
-  width = !width
-  overflow: hidden
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body
+  background-image: url('../images/background.jpg')
 
-span.field_with_errors
-  input, textarea
-    border: 2px solid red
+  #container
+    +container
+
+  #content
+    +column($blueprint-grid-columns)
+    @include curved
+    background: #9C0063
+    min-height: 500px
+
+  form
+    +blueprint-form
+
+  p
+    padding: 10px
+
+  h1
+    font-size: 1.4em
+
+  h2
+    font-size: 1.2em
+    margin: 0 0 5px 0
+    text-transform: uppercase
+
+  h3
+    font-size: 1.2em
+    margin: 1px 0 3px 0
+
+  h1, h2, h3
+    font-weight: bold
+
+  span.field_with_errors
+    input, textarea
+      border: 2px solid red
