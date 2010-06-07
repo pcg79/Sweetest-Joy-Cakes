@@ -11,6 +11,9 @@ gem 'rails', '3.0.0.beta3'
 # Deploy with Capistrano
 gem 'capistrano'
 
+# Webserver
+gem 'thin'
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri', '1.4.1'
