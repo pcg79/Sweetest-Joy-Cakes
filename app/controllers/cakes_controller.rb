@@ -8,14 +8,14 @@ class CakesController < ApplicationController
   end
 
   def create
-    @picture = Picture.create( params[:picture] )
+    @picture = Picture.create params[:picture]
   end
 
   def gallery
-    @birthday  = category_image :birthdays
-    @wedding   = category_image :weddings
-    @other     = category_image :others
-    @practice  = category_image :practice
+    @birthday = category_image :birthdays
+    @wedding  = category_image :weddings
+    @other    = category_image :others
+    @practice = category_image :practice
   end
 
   def birthdays
