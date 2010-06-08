@@ -1,21 +1,21 @@
 #!/usr/bin/env ruby
 
+# Requires fixing paperclip to work w/ Rails 3:
+# http://github.com/dwalters/paperclip/commit/2a85add5f102db8773518f8ac30f7e2337bf7d13
+
 class PictureImporter
   ImageFileTypes = %W(jpeg jpg JPEG JPG).join(',')
 
+  ENV_PATH  = File.expand_path('../../config/environment',  __FILE__)
+  BOOT_PATH = File.expand_path('../../config/boot',  __FILE__)
+  APP_PATH  = File.expand_path('../../config/application',  __FILE__)
+
   def self.init(args)
-    # Rails init
-    ENV['RAILS_ENV'] = ENV['RAILS_ENV'] || "development"
+    require APP_PATH
+    require BOOT_PATH
+    require ENV_PATH
 
-    puts "Using #{ENV['RAILS_ENV']} environment."
-
-    require File.dirname(__FILE__) + '/../config/boot'
-    require "#{RAILS_ROOT}/config/environment"
-
-    # Open ActiveRecord connection
-    self.connect(ARGV.first)
-
-    @import_dir = "#{RAILS_ROOT}/to_import"
+    @import_dir = "#{::Rails.root}/to_import"
   end
 
   def self.import
@@ -25,22 +25,13 @@ class PictureImporter
       file_name = f.split(File::SEPARATOR)[-1]
 
       puts "*** Checking #{f}"
-      unless Picture.find_by_photo_file_name_and_category(file_name, category)
+      unless ::Cake.find_by_photo_file_name_and_category(file_name, category)
         puts "*** Importing #{f}"
-        p = Picture.new
+        p = ::Cake.new
         p.photo = File.open(f)
         p.category = category
         p.save!
       end
-    end
-  end
-
-  private
-
-  class << self
-    def connect(environment)
-      conf = YAML::load(File.open(File.dirname(__FILE__) + '/../config/database.yml'))
-      ActiveRecord::Base.establish_connection(conf[environment])
     end
   end
 end
