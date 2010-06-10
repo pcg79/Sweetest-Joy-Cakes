@@ -1,15 +1,27 @@
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body
-  background-image: url('../images/background.jpg')
+  background: #d793bc
+  //  background-image: url('../images/background.jpg')
 
   #container
     +container
 
-  #content
+  #content-wrapper
     +column($blueprint-grid-columns)
+
+  #content
     @include curved
-    background: #9C0063
+    //    background: #9C0063
+    background: white
+    //    background-image: url("../images/cake2_background.png")
+    background-repeat: no-repeat
+    background-position: 95% 25px
     min-height: 500px
+    border: 5px solid gray
+    +font2
+
+  .inner
+    padding: 20px
 
   form
     +blueprint-form
@@ -22,8 +34,9 @@ body
 
   h2
     font-size: 1.2em
-    margin: 0 0 5px 0
+    margin: 0 0 25px 0
     text-transform: uppercase
+
 
   h3
     font-size: 1.2em

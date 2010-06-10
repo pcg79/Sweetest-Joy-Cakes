@@ -1,26 +1,56 @@
-#contact
-  %p
-    Whether you would like a quote on a cake or want to comment on a previous purchase, we'd love to hear from you.
-    %br
-    Just fill out and submit the below form and, if you provide contact information, we'll get back to you.
+#contact.inner
+  %h2
+    Contact Us
 
-  = form_for :contact_form, :url => contact_submit_path do |f|
+  #intro
     %p
-      = f.label :name, "Name"
-      %br
-      = f.text_field :name
+      Whether you would like a quote on a cake or want to comment on a previous purchase, we'd love to hear from you.
+
     %p
-      = f.label :email, "Email"
-      %br
-      = f.text_field :email
+      We can deliver to the Greater Washington DC Metro Area.
+
     %p
-      = f.label :phone_number, "Phone Number"
-      %br
-      = f.text_field :phone_number
-    %p
-      = f.label :message, "Comment"
-      %small (required)
-      %br
-      = f.text_area :message, :rows => "10"
-    %p
-      = f.submit "Submit", :class => "button"
+      Because your choice in cake size, flavor, icing, filling, and decorations is as unique as you are, pricing is done on a per customer basis.  Please contact us by one of the methods below and let us know what you're looking for.  We'll get back to you as soon as possible with pricing information.  Understand that due to demand not all dates are available and cakes due on short notice may require an additional fee.
+
+  = image_tag "../images/cake2_background.png", :width => "50%"
+
+  #contact_methods
+    #by_email
+      %strong By Email:
+      %p
+        =mail_to "sweetestjoycakes@gmail.com", "sweetestjoycakes@gmail.com", :encode => "hex"
+
+    #by_twitter
+      %strong On Twitter:
+      %p
+        =link_to "@SweetestJoyCake", "http://twitter.com/SweetestJoyCake", :target => "_blank"
+
+    #by_phone
+      %strong By Phone:
+      %p
+        703-634-3JOY (703-634-3569)
+
+    #by_web
+      %strong By Online Form:
+
+      %p
+        = form_for :contact_form, :url => contact_submit_path do |f|
+          %p
+            = f.label :name, "Name"
+            %br
+            = f.text_field :name
+          %p
+            = f.label :email, "Email"
+            %br
+            = f.text_field :email
+          %p
+            = f.label :phone_number, "Phone Number"
+            %br
+            = f.text_field :phone_number
+          %p
+            = f.label :message, "Message"
+            %small (required)
+            %br
+            = f.text_area :message, :rows => "10"
+          %p
+            = f.submit "Submit", :class => "button"

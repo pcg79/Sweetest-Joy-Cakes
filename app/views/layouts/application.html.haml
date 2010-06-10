@@ -28,9 +28,10 @@
             %li= link_to "Contact", contact_path
             %li= link_to "About", about_path
 
-      #content
-        = flash_notices
-        = yield
+      #content-wrapper
+        #content
+          = flash_notices
+          = yield
 
       #footer
         #copy

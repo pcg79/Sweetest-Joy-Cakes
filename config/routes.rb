@@ -5,9 +5,9 @@ JoysCakes::Application.routes.draw do |map|
 
   match '/about'   => 'content#about',   :as => :about
   match '/contact' => 'content#contact', :as => :contact
+  match '/flavors'   => 'content#flavors', :as => :flavors
 
   match '/gallery'   => 'cakes#gallery',   :as => :gallery
-  match '/flavors'   => 'cakes#flavors',   :as => :flavors
   match '/birthdays' => 'cakes#birthdays', :as => :birthdays
   match '/weddings'  => 'cakes#weddings',  :as => :weddings
   match '/others'    => 'cakes#others',    :as => :others
