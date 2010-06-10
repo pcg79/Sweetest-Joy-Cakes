@@ -34,9 +34,12 @@ class CakesController < ApplicationController
 
   def render_pictures(title, *categories)
     @pictures = Cake.order('photo_file_name ASC')
+    or_clause = ""
     categories.each do |category|
-      @pictures.where('category = ', category)
+      or_clause << " OR " unless or_clause.blank?
+      or_clause << "category = ?"
     end
+    @pictures = @pictures.where(or_clause, *categories)
     @pictures = @pictures / PicsPerRow
     @title = title
     render :action => 'index'
