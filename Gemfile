@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta3'
+gem 'rails', '3.0.0.beta4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -36,7 +36,7 @@ group :test do
 end
 
 gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
-gem "paperclip",         :git => "git://github.com/samsoffes/paperclip.git", :branch => "rails3"
+gem "paperclip", "=2.3.3", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem "autotest"
 gem "autotest-rails"
