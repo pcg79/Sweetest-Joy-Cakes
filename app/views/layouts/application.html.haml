@@ -7,12 +7,11 @@
     / # TODO: make compatible with IE 8
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=EmulateIE7" }
     %title
-      == Joy's Cakes - #{@page_title || "There's Joy in Every Bite"}
+      == The Sweetest Joy - #{@page_title || "There's Joy in Every Bite"}
 
     = javascript_include_tag "jquery"
     = stylesheet_link_tag "screen", :media => "screen, projection"
     = stylesheet_link_tag "print",  :media => "print"
-    / = stylesheet_link_tag "screen"
 
     /[if IE]
       = stylesheet_link_tag "ie"
@@ -20,6 +19,8 @@
   %body
     #container
       #header
+        %h1
+          The Sweetest Joy
         #header-list
           %ul
             %li= link_to "Home", root_path
