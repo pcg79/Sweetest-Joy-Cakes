@@ -9,9 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100607152650) do
+ActiveRecord::Schema.define(:version => 20100716011703) do
 
-  create_table "cakes", :force => true do |t|
+  create_table "cake_pictures", :force => true do |t|
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(:version => 20100607152650) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "category"
+    t.integer  "cake_id"
+    t.boolean  "display_picture"
+  end
+
+  create_table "cakes", :force => true do |t|
+    t.string   "name"
+    t.integer  "display_cake_picture_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

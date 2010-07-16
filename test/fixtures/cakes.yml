@@ -1,0 +1,40 @@
+elmo_simple:
+  name: Elmo (simple)
+  category: birthday
+
+elmo_upright:
+  name: Elmo
+  category: birthday
+
+toy_story:
+  name: Toy Story
+  category: birthday
+
+rainbow:
+  name: Rainbow
+  category: other
+
+clown_cupcakes:
+  name: Clown Cupcakes
+  category: other
+
+flower_bouquet:
+  name: Flower Bouquet
+  category: other
+
+flower_cascade:
+  name: Flower Cascade
+  category: other
+
+first_communiion:
+  name: First Communion
+  category: other
+
+birthday_present:
+  name: Birthday Present
+  category: other
+
+flower_cascade_2:
+  name: Pink Flower Cascade
+  category: other
+
