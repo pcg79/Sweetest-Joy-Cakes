@@ -27,6 +27,10 @@ class CakePicture < ActiveRecord::Base
     !self.rotation.nil? and self.rotate
   end
 
+  def category
+    cake.category if cake
+  end
+
   private
 
   def set_defaults
