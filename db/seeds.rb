@@ -27,7 +27,6 @@
 # end
 #
 
-count = 0
 begin
   ImageFileTypes = %W(jpeg jpg JPEG JPG).join(',')
 
@@ -56,14 +55,17 @@ begin
       puts "* Category = #{category.inspect}"
       puts "* Cake = #{cake.inspect}"
 
-      cp = CakePicture.new
-      cp.cake = cake
-      cp.display_picture = !!(file_name =~ /display/i)
-      File.open(f, 'r') { |photo_file| cp.photo = photo_file }
-      cp.save!
+      File.open(f, 'r') do |photo_file|
+        cp = CakePicture.new
+        cp.cake = cake
+        cp.display_picture = !!(file_name =~ /display/i)
+        cp.photo = photo_file
+        cp.save!
+
+        total_size += cp.photo_file_size
+        puts "** CakePicture = #{cp.inspect}"
+      end
       count += 1
-      total_size += cp.photo_file_size
-      puts "** CakePicture = #{cp.inspect}"
       puts #blank line
     else
       # puts "Cake already exists"

@@ -11,12 +11,12 @@ class CakePicturesController < ApplicationController
     @picture = Picture.create params[:picture]
   end
 
-  def gallery
-    @birthday = category_image :birthdays
-    @wedding  = category_image :weddings
-    @other    = category_image :others
-    @practice = category_image :practice
-  end
+  # def gallery
+  #   @birthday = category_image :birthdays
+  #   @wedding  = category_image :weddings
+  #   @other    = category_image :others
+  #   @practice = category_image :practice
+  # end
 
   def birthdays
     render_pictures 'Birthday Cakes', 'birthdays',

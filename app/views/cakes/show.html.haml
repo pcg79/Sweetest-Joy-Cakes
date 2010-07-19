@@ -2,12 +2,13 @@
 = javascript_include_tag "pictures"
 = stylesheet_link_tag "jquery.lightbox-0.5"
 
-#pictures
+#gallery
   %span#breadcrumb
-    = link_to "Back To Gallery", gallery_path
+    = link_to "Back To #{@cake.category.name.capitalize}", category_path(@cake.category)
+
+  %h1= @title
 
   %table#pictures
-    %caption= @title
     - @pictures.each do |pics|
       %tr
-        = render :partial => 'picture', :collection => pics, :as => :picture
+        = render :partial => 'cake_pictures/picture', :collection => pics, :as => :picture

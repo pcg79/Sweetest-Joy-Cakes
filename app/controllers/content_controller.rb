@@ -1,5 +1,9 @@
 class ContentController < ApplicationController
 
+  def gallery
+    redirect_to categories_path
+  end
+
   def contact
     @contact_form = ContactForm.new
   end

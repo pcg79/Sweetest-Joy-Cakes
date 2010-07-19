@@ -1,30 +1,41 @@
 div#gallery
   +container
-  margin: auto
+  margin: 15px
 
-div.thumbnails
-  position: absolute
-  padding: 40px
+  h1
+    text-align: center
+    +pretty-font
+    font-size: 3.0em
+    padding-bottom: 10px
 
-  a
-    text-decoration: none
-    border: 0
+  h2
+    text-align: center
+    margin-bottom: 10px
+    a
+      text-decoration: none
+      font-size: 20px
+      font-weight: bold
 
-div.thumbnails#left
-  right: 50%
+  span#breadcrumb
+    padding-left: 10px
 
-div.thumbnails#right
-  left: 50%
+  table#pictures
+    border-spacing: 5px
+    border-collapse: separate
+    margin: auto
 
-//div.thumbnails
-//  float: left
-//  padding: 20px
-//  margin: 50px
+    caption
+      text-align: center
+      font-size: 1.7em
+      padding: 5px 0
 
-h2
-  text-align: center
-  a
-    text-decoration: none
-    font-size: 20px
-    color: #808080
-    font-weight: bold
+    td
+      padding: 14px 14px 9px
+      background-image: url('../images/cell_background.jpg')
+
+div.category, div.cake
+  padding-bottom: 20px
+  img
+    display: block
+    margin: auto
+

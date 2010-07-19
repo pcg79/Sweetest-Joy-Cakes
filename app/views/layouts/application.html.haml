@@ -20,11 +20,11 @@
     #container
       #header
         %h1
-          The Sweetest Joy
+          =link_to "The Sweetest Joy", root_path
         #header-list
           %ul
             %li= link_to "Home", root_path
-            %li= link_to "Gallery", gallery_path
+            %li= link_to "Gallery", categories_path
             %li= link_to "Flavors", flavors_path
             %li= link_to "Contact", contact_path
             %li= link_to "About", about_path

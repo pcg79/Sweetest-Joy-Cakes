@@ -1,16 +1,19 @@
 JoysCakes::Application.routes.draw do |map|
+  resources :categories
+  resources :cakes
   resources :cake_pictures
 
   root :to => 'content#index'
 
   match '/about'   => 'content#about',   :as => :about
   match '/contact' => 'content#contact', :as => :contact
-  match '/flavors'   => 'content#flavors', :as => :flavors
+  match '/flavors' => 'content#flavors', :as => :flavors
+  match '/gallery' => 'content#gallery', :as => :gallery
 
-  match '/gallery'   => 'cake_pictures#gallery',   :as => :gallery
-  match '/birthdays' => 'cake_pictures#birthdays', :as => :birthdays
-  match '/weddings'  => 'cake_pictures#weddings',  :as => :weddings
-  match '/others'    => 'cake_pictures#others',    :as => :others
+  # match '/birthdays' => 'cakes#birthdays', :as => :birthdays
+  # match '/weddings'  => 'cakes#weddings',  :as => :weddings
+  # match '/others'    => 'cakes#other',     :as => :other
+  # match '/practice'  => 'cakes#practice',  :as => :practice
 
   match '/contact_submit' => 'content#contact_submit', :as => :contact_submit
 

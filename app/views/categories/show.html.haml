@@ -1,0 +1,6 @@
+#gallery
+  %span#breadcrumb
+    = link_to "Back To Gallery", categories_path
+
+  %h1= @category.name.capitalize
+  = render :partial => "cakes/cake", :collection => @cakes
