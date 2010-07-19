@@ -1,3 +1,5 @@
 .category
-  %h2= link_to category.name, category_path(category)
+  %h2
+    = link_to category.name, category_path(category)
+    == (#{pluralize(category.cakes.count, "cake")})
   = link_to image_tag(category.display_picture.photo.url(:medium)), category_path(category)

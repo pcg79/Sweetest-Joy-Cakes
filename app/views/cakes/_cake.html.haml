@@ -1,3 +1,5 @@
 .cake
-  %h2= link_to cake.name, cake_path(cake)
+  %h2
+    = link_to cake.name, cake_path(cake)
+    == (#{pluralize(cake.cake_pictures.count, "picture")})
   = link_to image_tag(cake.display_picture.photo.url(:thumb)), cake_path(cake)
