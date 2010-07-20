@@ -4,7 +4,7 @@
 
 #gallery
   %span#breadcrumb
-    = link_to "Back To #{@cake.category.name.capitalize}", category_path(@cake.category)
+    = link_to "Back To #{@cake.category.name.titleize}", category_path(@cake.category)
 
   %h1= @title
 

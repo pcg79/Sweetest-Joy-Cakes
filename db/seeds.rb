@@ -67,6 +67,7 @@ begin
       end
       count += 1
       puts #blank line
+      sleep(2)
     else
       # puts "Cake already exists"
     end

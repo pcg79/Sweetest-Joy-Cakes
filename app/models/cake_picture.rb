@@ -2,7 +2,7 @@ class CakePicture < ActiveRecord::Base
   belongs_to :cake
 
   has_attached_file :photo,
-                    :styles => { :medium => "500x500>", :thumb => "100x100#" },
+                    :styles => { :large => "500x500>", :medium => "200x200#", :thumb => "100x100#" },
                     :processors => [:rotator]
 
   scope :by_category,  lambda { |*args| where("category = ?", args.first).order('photo_file_name ASC') }

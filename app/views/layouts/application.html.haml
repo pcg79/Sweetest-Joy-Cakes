@@ -23,11 +23,16 @@
           =link_to "The Sweetest Joy", root_path
         #header-list
           %ul
-            %li= link_to "Home", root_path
-            %li= link_to "Gallery", categories_path
-            %li= link_to "Flavors", flavors_path
-            %li= link_to "Contact", contact_path
-            %li= link_to "About", about_path
+            %li
+              %strong= link_to "Home", root_path
+            %li
+              %strong= link_to "Gallery", categories_path
+            %li
+              %strong= link_to "Flavors", flavors_path
+            %li
+              %strong= link_to "Contact", contact_path
+            %li
+              %strong= link_to "About", about_path
 
       #content-wrapper
         #content

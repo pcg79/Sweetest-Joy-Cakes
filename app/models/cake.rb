@@ -3,7 +3,11 @@ class Cake < ActiveRecord::Base
   belongs_to :category
 
   def display_pictures
-    @display_pictures ||= cake_pictures.display_pictures || []
+    unless @display_pictures
+      @display_pictures = cake_pictures.display_pictures.blank? ? cake_pictures : cake_pictures.display_pictures
+    end
+
+    @display_pictures
   end
 
   def display_picture

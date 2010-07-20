@@ -25,4 +25,5 @@ JoysCakes::Application.configure do
 
   # Paperclip (for identify command - from: http://nhw.pl/wp/2009/07/14/paperclip-passenger-identify-not-recognized)
   Paperclip.options[:command_path] = "/opt/local/bin"
+  Paperclip.options[:swallow_stderr] = false
 end

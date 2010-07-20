@@ -1,6 +1,18 @@
 div#gallery
-  +container
+  width: 920px
+  overflow: hidden
   margin: 15px
+
+  div#categories
+    margin: auto
+    width: 825px
+
+  div.category
+    float: left
+    width: 275px
+    height: 300px
+    text-align: center
+
 
   h1
     text-align: center
@@ -9,12 +21,15 @@ div#gallery
     padding-bottom: 10px
 
   h2
-    text-align: center
-    margin-bottom: 10px
+    margin: 0px
     a
-      text-decoration: none
-      font-size: 20px
+      +pretty-font
+      font-size: 1.5em
       font-weight: bold
+
+  p
+    text-transform: capitalize
+    padding: 0px
 
   span#breadcrumb
     padding-left: 10px
@@ -32,10 +47,3 @@ div#gallery
     td
       padding: 14px 14px 9px
       background-image: url('../images/cell_background.jpg')
-
-div.category, div.cake
-  padding-bottom: 20px
-  img
-    display: block
-    margin: auto
-
