@@ -35,7 +35,7 @@ group :test do
   gem "shoulda",      :git => "git://github.com/thoughtbot/shoulda.git",      :branch => "rails3", :require => nil
 end
 
-gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
+# gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
 gem "paperclip", "=2.3.3", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem "autotest"
