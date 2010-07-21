@@ -1,3 +1,5 @@
+include Paperclip
+
 class CakePicture < ActiveRecord::Base
   belongs_to :cake
 
