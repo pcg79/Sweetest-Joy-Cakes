@@ -1,0 +1,41 @@
+@import "base";;
+/* line 9, ../../app/stylesheets/application.sass */
+body {
+  background-image: url("../images/background.jpg");
+}
+
+/* line 13, ../../app/stylesheets/application.sass */
+p {
+  padding: 10px;
+}
+
+/* line 16, ../../app/stylesheets/application.sass */
+h1 {
+  font-size: 1.4em;
+}
+
+/* line 20, ../../app/stylesheets/application.sass */
+h2 {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+/* line 25, ../../app/stylesheets/application.sass */
+h3 {
+  font-size: 1.2em;
+  margin: 1px 0 3px 0;
+}
+
+/* line 30, ../../app/stylesheets/application.sass */
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+@import url(header.css);
+@import url(flash.css);
+@import url(content.css);
+@import url(pictures.css);
+@import url(gallery.css);
+@import url(flavors.css);
+@import url(footer.css);

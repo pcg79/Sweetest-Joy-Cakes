@@ -7,9 +7,6 @@ to_import/
 db/*.sqlite3
 log/*.log
 tmp/**/*
-public/uploads/*
-public/stylesheets
-public/javascripts/*_packaged.js
 tags
 TAGS
 workspace

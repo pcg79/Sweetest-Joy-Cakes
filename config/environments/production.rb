@@ -39,4 +39,6 @@ JoysCakes::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+
+  Sass::Plugin.options[:never_update] = true
 end
