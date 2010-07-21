@@ -1,5 +1,3 @@
-require 'paperclip'
-
 class CakePicture < ActiveRecord::Base
   belongs_to :cake
 
