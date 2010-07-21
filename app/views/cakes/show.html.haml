@@ -2,7 +2,7 @@
 = javascript_include_tag "pictures"
 = stylesheet_link_tag "jquery.lightbox-0.5"
 
-#gallery
+#gallery.inner
   %span#breadcrumb
     = link_to "Back To #{@cake.category.name.titleize}", category_path(@cake.category)
 
