@@ -74,7 +74,7 @@ begin
   end
 rescue Exception => e
   puts e.message
-  # puts e.backtrace.join "\n"
+  puts e.backtrace.join "\n"
   puts "#{count} Pictures Saved"
   puts "#{total_size} Total file size"
 end

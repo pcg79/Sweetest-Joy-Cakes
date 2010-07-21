@@ -1,5 +1,6 @@
 config/database.yml
 config/config.yml
+config/amazon_s3.yml
 .DS_Store
 db/backup
 to_import/

@@ -22,6 +22,7 @@ gem "compass", ">= 0.10.1"
 # gem 'hassle', :git => 'http://github.com/koppen/hassle.git'
 
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
+gem "aws-s3"
 
 # gem "autotest"
 # gem "autotest-rails"

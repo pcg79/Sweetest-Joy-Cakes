@@ -5,6 +5,9 @@ class CakePicture < ActiveRecord::Base
 
   has_attached_file :photo,
                     :styles => { :large => "500x500>", :medium => "200x200#", :thumb => "100x100#" },
+                    :storage => :s3,
+                    :s3_credentials => "#{Rails.root}/config/amazon_s3.yml",
+                    :path => ":attachment/:id/:style/:basename.:extension",
                     :processors => [:rotator]
 
   scope :by_category,  lambda { |*args| where("category = ?", args.first).order('photo_file_name ASC') }
