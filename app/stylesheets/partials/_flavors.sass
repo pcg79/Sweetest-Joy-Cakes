@@ -1,23 +1,40 @@
-table.flavors
-  padding: 10px
+div#flavors
+  min-height: 510px
 
-  th
-    font-size: 1.2em
-    margin: 1px 0 3px 0
+  h1
+    text-align: center
+    +pretty-font
+    font-size: 3.0em
+    padding-bottom: 10px
+
+  div.flavors
+    float: left
+    width: 275px
+    height: 300px
+
+  div#cake_flavors
+    width: 150px
+    padding-left: 113px
+
+  div#icing_flavors
+    padding-left: 85px
+
+  div#filling_flavors
+    width: 150px
+    padding-left: 70px
+
+  ul
+    padding-top: 10px
+
+  ul li
+    padding-left: 16px
+
+  ul li ul
+    padding-top: 0px
+
+  li.header
     font-weight: bold
+    padding-bottom: 5px
 
-table#cake_flavors
-  float: left
-
-table#icing_flavors
-  float: right
-
-div#cake_flavors
-  left: 30%
-
-div#filling_flavors
-  right: 30%
-
-div.flavors
-  padding: 20px
-  position: absolute
+    ul
+      font-weight: normal
