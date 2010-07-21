@@ -18,6 +18,7 @@ gem "compass", ">= 0.10.1"
 # end
 
 # gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
+gem "hassle"
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
 # gem "autotest"
