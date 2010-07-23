@@ -5,9 +5,8 @@ class MailComment < ActionMailer::Base
     @message      = contact_form.message
     @phone_number = contact_form.phone_number
 
-    # to = ["joy.suguitan@gmail.com", "pat.george@gmail.com"]
-    to = "pat.george@gmail.com"
+    to = ["joy.suguitan@gmail.com", "pat.george@gmail.com", "sweetestjoycakes@gmail.com"]
 
-    mail :to => to, :from => contact_form.email || "Unknown <pat.george@gmail.com>", :subject => "Contact from Joy's site"
+    mail :to => to, :from => contact_form.email || "Unknown <pat.george@gmail.com>", :subject => "Contact from Sweetest Joy Cakes"
   end
 end
