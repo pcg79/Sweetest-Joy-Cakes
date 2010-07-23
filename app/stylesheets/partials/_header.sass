@@ -13,18 +13,59 @@ div#header
       outline: none
 
   div#header-list
-    margin-top: 35px
-
-    ul
-      text-align: center
-
-    li
-      display: inline
-
-    li:last-child
-      background: none
+    margin-top: 27px
 
     a
       +link-colors(black, purple)
       +hover-link
-      padding: 0 53px
+      margin-left: 60px
+      display: block
+      text-indent: -3000em
+      float: left
+      width: 100px
+      height: 40px
+      background-repeat: no-repeat
+      background-attachment: scroll
+      background-color: transparent
+      outline: none
+      height: 33px
+
+    a#home
+      background-image: url("../images/text/All.png")
+      margin-left: 113px
+      width: 85px
+
+      &:hover
+        background-position: 0px -36px
+
+    a#gallery
+      background-image: url("../images/text/All.png")
+      background-position: -85px -2px
+
+      &:hover
+        background-position: -85px -36px
+
+    a#flavors
+      width: 110px
+      background-image: url("../images/text/All.png")
+      background-position: -185px 0px
+
+      &:hover
+        background-position: -185px -36px
+
+
+    a#contact
+      width: 110px
+      background-image: url("../images/text/All.png")
+      background-position: -288px 0px
+
+      &:hover
+        background-position: -288px -36px
+
+    a#about
+      width: 110px
+      background-image: url("../images/text/All.png")
+      background-position: -393px 0px
+
+      &:hover
+        background-position: -393px -35px

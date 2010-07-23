@@ -7,7 +7,7 @@
     / # TODO: make compatible with IE 8
     %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=EmulateIE7" }
     %title
-      == The Sweetest Joy - #{@page_title || "There's Joy in Every Bite"}
+      == The Sweetest Joy - #{@page_title || "Joy in Every Bite"}
 
     = javascript_include_tag "jquery"
     = stylesheet_link_tag "screen", :media => "screen, projection"
@@ -15,24 +15,18 @@
 
     /[if IE]
       = stylesheet_link_tag "ie"
+      = stylesheet_link_tag "border-radius.htc"
 
   %body
     #container
       #header
-        %h1
-          =link_to "The Sweetest Joy", root_path
+        =link_to image_tag('../images/text/Title.png', :width => "400", :alt => "The Sweetest Joy"), root_path
         #header-list
-          %ul
-            %li
-              %strong= link_to "Home", root_path
-            %li
-              %strong= link_to "Gallery", categories_path
-            %li
-              %strong= link_to "Flavors", flavors_path
-            %li
-              %strong= link_to "Contact", contact_path
-            %li
-              %strong= link_to "About", about_path
+          = link_to "Home", root_path, :id => "home"
+          = link_to "Gallery", categories_path, :id => "gallery"
+          = link_to "Flavors", flavors_path, :id => "flavors"
+          = link_to "Contact", contact_path, :id => "contact"
+          = link_to "About", about_path, :id => "about"
 
       #content-wrapper
         #content
