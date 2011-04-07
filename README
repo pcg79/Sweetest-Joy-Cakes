@@ -1,0 +1,17 @@
+To import pictures:
+
+1. Make sure Postgres is started:
+
+bin/start_pgsql.sh
+
+2. Copy files to the import dir
+
+rsync -a --verbose --progress --exclude=.DS_Store /Volumes/WD\ External/Cakes/ ~/dev/joys_cakes/to_import
+
+3. Run the importer:
+
+bin/import_pictures.rb
+
+4. Push the database out to Heroku
+
+be heroku db:push
