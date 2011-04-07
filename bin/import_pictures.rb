@@ -21,17 +21,28 @@ class PictureImporter
   def self.import
     Dir.chdir(@import_dir)
     Dir["./**/*.{#{ImageFileTypes}}"].each do |f|
-      category  = f.split(File::SEPARATOR)[1].downcase
-      file_name = f.split(File::SEPARATOR)[-1]
+      category_name = f.split(File::SEPARATOR)[1]
+      cake_name = f.split(File::SEPARATOR)[2]
+      file_name = f.split(File::SEPARATOR)[3]
 
       puts "*** Checking #{f}"
-      unless ::Cake.find_by_photo_file_name_and_category(file_name, category)
+
+      category = ::Category.find_or_create_by_name(category_name)
+      cake = category.cakes.find_or_create_by_name(cake_name)
+
+      unless cake.cake_pictures.find_by_photo_file_name(file_name)
         puts "*** Importing #{f}"
-        p = ::Cake.new
-        p.photo = File.open(f)
-        p.category = category
-        p.save!
+        cp = cake.cake_pictures.create!(:photo => File.open(f))
+        puts "*** Imported #{cp.inspect}"
       end
+
+      # unless ::Cake.find_by_photo_file_name_and_category(file_name, category)
+      #   puts "*** Importing #{f}"
+      #   p = ::Cake.new
+      #   p.photo = File.open(f)
+      #   p.category = category
+      #   p.save!
+      # end
     end
   end
 end
