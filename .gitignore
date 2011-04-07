@@ -4,6 +4,7 @@ config/amazon_s3.yml
 .DS_Store
 db/backup
 to_import/
+to_import_old/
 .bundle
 db/*.sqlite3
 log/*.log
@@ -12,3 +13,4 @@ tags
 TAGS
 workspace
 public/system
+vendor/ruby
