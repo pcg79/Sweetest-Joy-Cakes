@@ -1,6 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
+gem 'heroku', '1.18.3'
+
+gem 'taps' # Needed for heroku db:push
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -21,7 +24,7 @@ gem "compass", ">= 0.10.1"
 # gem "hassle"
 # gem 'hassle', :git => 'http://github.com/koppen/hassle.git'
 
-gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
+gem "paperclip", "2.3.10"
 gem "aws-s3"
 
 # gem "autotest"
