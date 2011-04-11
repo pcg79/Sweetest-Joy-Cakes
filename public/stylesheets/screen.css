@@ -267,7 +267,7 @@ div#header div#header-list {
 div#header div#header-list a {
   color: black;
   text-decoration: none;
-  margin-left: 60px;
+  margin-left: 47px;
   display: block;
   text-indent: -3000em;
   float: left;
@@ -290,7 +290,7 @@ div#header div#header-list a:hover {
 /* line 33, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#home {
   background-image: url("../images/text/All.png");
-  margin-left: 113px;
+  margin-left: 70px;
   width: 85px;
 }
 /* line 38, ../../app/stylesheets/partials/_header.sass */
@@ -328,13 +328,23 @@ div#header div#header-list a#contact:hover {
 }
 /* line 65, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#about {
-  width: 110px;
+  width: 90px;
   background-image: url("../images/text/All.png");
   background-position: -393px 0px;
 }
 /* line 70, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#about:hover {
   background-position: -393px -35px;
+}
+/* line 73, ../../app/stylesheets/partials/_header.sass */
+div#header div#header-list a#blog {
+  width: 70px;
+  background-image: url("../images/text/All.png");
+  background-position: -491px 0px;
+}
+/* line 78, ../../app/stylesheets/partials/_header.sass */
+div#header div#header-list a#blog:hover {
+  background-position: -491px -35px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_flash.sass */
