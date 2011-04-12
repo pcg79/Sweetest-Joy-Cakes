@@ -580,3 +580,7 @@ div#contact div#bottom_contact_methods {
 div#about p {
   padding: 0 0 15px;
 }
+/* line 5, ../../app/stylesheets/partials/_about.sass */
+div#about img#family {
+  padding: 5px 10px 0px 5px;
+}
