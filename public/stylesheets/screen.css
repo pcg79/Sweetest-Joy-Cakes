@@ -243,27 +243,26 @@ div#header {
   font-size: 1.5em;
   font-weight: bold;
   height: 128px;
-  background-image: url("../images/header.png");
 }
 /* line 138, ../../vendor/ruby/1.9.1/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html div#header {
   overflow-x: hidden;
 }
-/* line 7, ../../app/stylesheets/partials/_header.sass */
+/* line 6, ../../app/stylesheets/partials/_header.sass */
 div#header h1 {
   padding-top: 15px;
 }
-/* line 10, ../../app/stylesheets/partials/_header.sass */
+/* line 9, ../../app/stylesheets/partials/_header.sass */
 div#header h1 a {
   text-decoration: none;
   color: black;
   outline: none;
 }
-/* line 15, ../../app/stylesheets/partials/_header.sass */
+/* line 14, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list {
   margin-top: 27px;
 }
-/* line 18, ../../app/stylesheets/partials/_header.sass */
+/* line 17, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a {
   color: black;
   text-decoration: none;
@@ -287,62 +286,62 @@ div#header div#header-list a:hover {
 div#header div#header-list a:hover {
   text-decoration: underline;
 }
-/* line 33, ../../app/stylesheets/partials/_header.sass */
+/* line 32, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#home {
   background-image: url("../images/text/All.png");
   margin-left: 70px;
   width: 85px;
 }
-/* line 38, ../../app/stylesheets/partials/_header.sass */
+/* line 37, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#home:hover {
   background-position: 0px -36px;
 }
-/* line 41, ../../app/stylesheets/partials/_header.sass */
+/* line 40, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#gallery {
   background-image: url("../images/text/All.png");
   background-position: -85px -2px;
 }
-/* line 45, ../../app/stylesheets/partials/_header.sass */
+/* line 44, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#gallery:hover {
   background-position: -85px -36px;
 }
-/* line 48, ../../app/stylesheets/partials/_header.sass */
+/* line 47, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#flavors {
   width: 110px;
   background-image: url("../images/text/All.png");
   background-position: -185px 0px;
 }
-/* line 53, ../../app/stylesheets/partials/_header.sass */
+/* line 52, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#flavors:hover {
   background-position: -185px -36px;
 }
-/* line 57, ../../app/stylesheets/partials/_header.sass */
+/* line 56, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#contact {
   width: 110px;
   background-image: url("../images/text/All.png");
   background-position: -288px 0px;
 }
-/* line 62, ../../app/stylesheets/partials/_header.sass */
+/* line 61, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#contact:hover {
   background-position: -288px -36px;
 }
-/* line 65, ../../app/stylesheets/partials/_header.sass */
+/* line 64, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#about {
   width: 90px;
   background-image: url("../images/text/All.png");
   background-position: -393px 0px;
 }
-/* line 70, ../../app/stylesheets/partials/_header.sass */
+/* line 69, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#about:hover {
   background-position: -393px -35px;
 }
-/* line 73, ../../app/stylesheets/partials/_header.sass */
+/* line 72, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#blog {
   width: 70px;
   background-image: url("../images/text/All.png");
   background-position: -491px 0px;
 }
-/* line 78, ../../app/stylesheets/partials/_header.sass */
+/* line 77, ../../app/stylesheets/partials/_header.sass */
 div#header div#header-list a#blog:hover {
   background-position: -491px -35px;
 }
@@ -418,7 +417,7 @@ div#gallery h1 {
   margin: auto;
   text-indent: -3000em;
   background: url("../images/text/All.png") no-repeat -564px -58px;
-  width: 170px;
+  width: 153px;
 }
 /* line 23, ../../app/stylesheets/partials/_gallery.sass */
 div#gallery h2 {
