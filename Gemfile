@@ -14,6 +14,7 @@ gem 'taps' # Needed for heroku db:push
 
 gem "pg"
 gem "haml", ">=3.0.4"
+gem 'high_voltage'
 
 # group :test do
 #   gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"

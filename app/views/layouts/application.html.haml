@@ -24,9 +24,9 @@
         #header-list
           = link_to "Home", root_path, :id => "home"
           = link_to "Gallery", categories_path, :id => "gallery"
-          = link_to "Flavors", flavors_path, :id => "flavors"
+          = link_to "Flavors", page_path('flavors'), :id => "flavors"
           = link_to "Contact", contact_path, :id => "contact"
-          = link_to "About", about_path, :id => "about"
+          = link_to "About", page_path('about'), :id => "about"
           = link_to "Blog", "http://sweetestjoycakes.blogspot.com/", :id => "blog", :target => "_blank"
 
       #content-wrapper
