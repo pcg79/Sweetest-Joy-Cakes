@@ -3,8 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 gem 'rake', '~> 0.8.7'
 gem 'heroku'
-
-gem 'taps' # Needed for heroku db:push
+gem 'taps' # Needed for heroku db:push/pull
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -14,6 +13,7 @@ gem 'taps' # Needed for heroku db:push
 
 gem "pg"
 gem "haml", ">=3.0.4"
+gem 'compass'
 gem 'high_voltage'
 
 # group :test do
