@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '3.0.7'
+gem 'rake', '~> 0.8.7'
 gem 'heroku', '1.18.3'
 
 gem 'taps' # Needed for heroku db:push
@@ -13,7 +14,6 @@ gem 'taps' # Needed for heroku db:push
 
 gem "pg"
 gem "haml", ">=3.0.4"
-gem "compass", ">= 0.10.1"
 
 # group :test do
 #   gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"
