@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 gem 'rake', '~> 0.8.7'
-gem 'heroku', '1.18.3'
+gem 'heroku'
 
 gem 'taps' # Needed for heroku db:push
 
