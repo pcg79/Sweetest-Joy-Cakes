@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.20'
 gem 'rake', '~> 0.8.7'
 gem 'heroku'
 gem 'taps' # Needed for heroku db:push/pull
